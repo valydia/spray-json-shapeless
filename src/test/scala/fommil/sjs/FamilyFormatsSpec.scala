@@ -253,7 +253,7 @@ class FamilyFormatsSpec extends FlatSpec with Matchers
     """{"thing": 1, "label": "test"}""".parseJson.convertTo[Billy] shouldBe Billy(1, "test", 5, Mickey("mouse", 3))
   }
 
-  it should "support default parameters on case coproducts" in {
+  it should "support default parameters on coproducts" in {
     """{"type":"Mozz","n":"wow"}""".parseJson.convertTo[Paff] shouldBe Mozz("wow", 4, Paf("hello"))
   }
 
